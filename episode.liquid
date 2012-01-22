@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    {% include 'improbable_podcast/head' %}
+    <title>{{ episode.title }} - {{show.name}} - Bonnes Ondes</title>
+  </head>
+
+  <body class="episode">
+    <div id="page">
+      {% include 'improbable_podcast/header' %}
+
+      <div id="content">
+        <h2>{{episode.title}}</h2>
+        <div class="description">
+          {{ episode.image.tag }}
+          {{ episode.html_description }}
+        </div>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'improbable-podcast';
+          var disqus_identifier = '{{ episode.slug }}';
+          var disqus_url = '{{ episode.url_for }}';
+
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+      </div>
+
+      <div id="sidebar">
+        {% unless episode.principal_contents == empty %}
+        <h2>Ecouter l'émission</h2>
+
+     	  {% for content in episode.principal_contents %}
+	      <div class="audio">
+          {% if forloop.length > 1 %}
+          <p class="name">{{content.name}}</p>
+          {% endif %}
+
+          {{ content.audio_player }}
+
+          <a href="{{content.url_for_playlist}}">Ecouter</a> 
+          | Télécharger <a href="{{content.url_for_mp3}}">Mp3</a>
+          | <a href="{{content.url_for_ogg}}">Ogg</a>
+	      </div>
+        {% endfor %}
+        {% endunless %}
+
+        {% include 'improbable_podcast/sidebar' %}
+      </div>
+
+      {% include 'improbable_podcast/footer' %}
+    </div>
+    </body>
+</html>

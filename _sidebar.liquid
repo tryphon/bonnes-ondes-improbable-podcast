@@ -1,0 +1,36 @@
+        <!--
+        <h2>Direct</h2>
+
+        <p>
+          Le Mercredi de 20h à 22h
+        </p>
+
+        <div class="ui360"><a href="http://stream.tryphon.eu/improbable-podcast.mp3" title="Ecouter en direct">En direct jusqu'à 22h</a></div>
+
+        Ecouter en <a href="http://stream.tryphon.eu/improbable-podcast.mp3.m3u">MP3</a> 
+        -->
+
+        <h2>Podcast</h2>
+
+        <div class="podcast">
+          <p>
+            Adresse du podcast : <input size="{{show.url_for_podcast | size}}" value="{{show.url_for_podcast}}" type="text" readonly="true"/> 
+          </p>
+      
+          <p>
+            <a href="{{show.itpc_url_for_podcast}}" title="Ajouter cd podcast dans votre iTunes">iTunes</a> 
+            | <a href="{{show.url_for_podcast}}" title="Voir le feed RSS">RSS</a> 
+            | {{show.clippy_for_podcast}}
+          </p>
+        </div>
+
+        <h2>Retrouvez nous via</h2>
+
+        <ul class="social-medias">
+          <!--
+          <li class="itunes"><a href="http://itunes.apple.com/podcast/la-radio-des-jeux/id343200920">iTunes</a></li>
+          <li class="facebook"><a href="http://www.facebook.com/pages/La-Radio-des-Jeux/183265270527">FaceBook</a></li>
+          -->
+          <li class="rss"><a href="{{show.url_for_podcast}}">Feed RSS</a></li>
+        </ul>
+
