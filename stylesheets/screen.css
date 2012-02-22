@@ -196,6 +196,10 @@ body.show ul.episodes li .button {
   background: transparent url('../images/itunes.png') no-repeat scroll center left;
 }
 
+#sidebar ul.social-medias li.twitter {
+  background: transparent url('../images/twitter.png') no-repeat scroll center left;
+}
+
 body.episode #content h2 {
   font-size: 1.5em;
   font-weight: bold;
@@ -243,4 +247,12 @@ body.episode #content #disqus_thread {
 #sidebar audio {
   margin-top: 12px;
   width: 253px;
+}
+
+#sidebar div.twitter {
+  font-size: 0.9em;  
+}
+
+#sidebar div.twitter li {
+  margin: 5px 0;
 }
