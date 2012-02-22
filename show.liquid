@@ -14,10 +14,6 @@
           {{show.description | textilize}}
         </div>
 
-        <div class="live">
-          {% include 'improbablepodcast/live' %}
-        </div>
-
         <div class="posts">
           {% for post in show.posts limit:1 %}
           <h3>{{ post.title }}</h3>
