@@ -10,6 +10,12 @@
     <script src="{{theme.url_for_assets}}/javascripts/prototype.min.js"></script>
     <script src="{{theme.url_for_assets}}/javascripts/application.js"></script>
 
+    <script src="https://platform.twitter.com/anywhere.js?id=NB6w10k567glsyr7fKRJiQ&v=1" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      twttr.anywhere.config({ callbackURL: "{{ show.url_for }}" });
+    </script>               
+
     <script src="/javascripts/soundmanager2.js"></script>
     <script src="/javascripts/360player.js"></script>
     <script>
@@ -17,7 +23,7 @@
 
       soundManager.useFastPolling = true; // increased JS callback frequency, combined with useHighPerformance = true
 
-      threeSixtyPlayer.config.loadRingColor = "#F3EBE0";
+      threeSixtyPlayer.config.loadRingColor = "#ddd";
 
       threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
       threeSixtyPlayer.config.showHMSTime = true;
