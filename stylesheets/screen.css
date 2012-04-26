@@ -2,6 +2,7 @@
 
 html {
     background: #eee;
+    height: 100%;
 }
 
 body {
@@ -112,7 +113,7 @@ body.show ul.episodes li img {
     margin-right: 10px;
 }
 
-body.show ul.episodes li h3, body.show div.posts h3, body.show div.live h3 {
+body.show ul.episodes li h3, body.show div.posts h3, body.stream div.live h3 {
     margin-bottom: 5px;
     color: #7D1B7F;
     font-size: 1.5em;
@@ -258,18 +259,22 @@ body.episode #content #disqus_thread {
   margin: 5px 0;
 }
 
-#content .live .twitter-box {
+body.stream .live {
+    width: 600px;
+}
+
+body.stream .live .twitter-box {
   margin-top: 20px;
 }
-#content .live .twtr-widget {
+body.stream .live .twtr-widget {
   clear: both;
 }
 
-#content .live .ui360 {
+body.stream .live .ui360 {
     margin-left: 15px;
 }
 
-#content .live .ui360 a {
+body.stream .live .ui360 a {
     font-size: 1.2em;
     color: #7d1b7f;
     font-size: 1.5em;
@@ -277,22 +282,27 @@ body.episode #content #disqus_thread {
     margin-top: -25px;
 }
 
-#content .live .ui360 a strong {
+body.stream .live .ui360 a strong {
     font-size: 1.5em;
     color: #ec75a7;
     font-weight: bold;
 }
 
-#content .live .m3u {
+body.stream .live .m3u {
   text-align: center;
   margin: 15px;
 }
 
-#content .live .m3u a {
+body.stream .live .m3u a {
   color: #7D1B7F;
   text-decoration: underline;
   background: transparent url('../images/vlc.png') no-repeat scroll center left;
   padding-left: 20px;
+}
+
+body.stream {
+    background: white;
+    height: 100%;
 }
 
 
