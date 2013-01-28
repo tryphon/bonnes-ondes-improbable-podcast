@@ -1,13 +1,3 @@
-        <!-- <h2>Direct</h2> -->
-
-        <!-- <p> -->
-        <!--   Le Mercredi de 21h à 22h30 -->
-        <!-- </p> -->
-
-        <!-- <div class="ui360"><a href="http://stream.tryphon.eu/improbable-podcast.mp3" title="Ecouter en direct">En direct jusqu'à 22h30</a></div> -->
-
-        <!-- Ecouter en <a href="http://stream.tryphon.eu/improbable-podcast.mp3.m3u">MP3</a>  -->
-
         <h2>Podcast</h2>
 
         <div class="podcast">
@@ -25,9 +15,6 @@
         <h2>Retrouvez nous via</h2>
 
         <ul class="social-medias">
-          <!--
-          <li class="itunes"><a href="http://itunes.apple.com/podcast/la-radio-des-jeux/id343200920">iTunes</a></li>
-          -->
           <li class="rss"><a href="{{show.url_for_podcast}}">Feed RSS</a></li>
           <li class="facebook"><a href="https://www.facebook.com/pages/Limprobable-podcast/353673997994138">FaceBook</a></li>
           <li class="twitter"><a href="http://twitter.com/improbablepodca">Twitter</a></li>
@@ -39,13 +26,32 @@
           
         </div>
 
-        <span id="twitter-follow"/>
+        <div>
+          <span id="twitter-follow"/>
 
-        <script type="text/javascript">
-          twttr.anywhere(function (T) {
-            T('#twitter-follow').followButton("improbablepodca");
-          });
-        </script>
+          <script type="text/javascript">
+            twttr.anywhere(function (T) {
+              T('#twitter-follow').followButton("improbablepodca");
+            });
+          </script>
+        </div>
 
+        {% for episode in show.tag.saison-1 %}
+          {% if forloop.first %}
+          <h2>Saison 1</h2>
+          <ul class="episodes">
+          {% endif %}
+            <li>
+              <a href="{{ episode.url_for }}">
+              {{ episode.title }}
+              </a>
+              {% if episode.broadcasted_at %}
+              <span class="broadcast_date">diffusé {{episode.broadcasted_at | date: 'le %d/%m/%Y'}}</span>
+              {% endif %}
+            </li>
+          {% if forloop.last %}
+          </ul>
+          {% endif %}
+        {% endfor %}
 
 

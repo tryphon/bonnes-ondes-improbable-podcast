@@ -99,7 +99,7 @@ body.show div.posts p, body.show div.description p {
     margin-bottom: 0.5em;
 }
 
-body.show ul.episodes li {
+body.show #content ul.episodes li {
     width: 298px;
     height: 19em;
     float: left;
@@ -108,12 +108,12 @@ body.show ul.episodes li {
     margin-bottom: 10px;
 }
 
-body.show ul.episodes li img {
+body.show #content ul.episodes li img {
     float: left;
     margin-right: 10px;
 }
 
-body.show ul.episodes li h3, body.show div.posts h3, body.stream div.live h3 {
+body.show #content ul.episodes li h3, body.show div.posts h3, body.stream div.live h3 {
     margin-bottom: 5px;
     color: #7D1B7F;
     font-size: 1.5em;
@@ -124,16 +124,16 @@ body.show div.posts {
     margin-bottom: 2em;
 }
 
-body.show ul.episodes li h3 a {
+body.show #content ul.episodes li h3 a {
     text-decoration: none;
 }
 
-body.show ul.episodes li a {
+body.show #content ul.episodes li a {
     text-decoration: none;
     color: #7D1B7F;
 }
 
-body.show ul.episodes li .broadcast_date {
+body.show #content ul.episodes li .broadcast_date {
     color: #777;
     position: absolute;
     right: 0px;
@@ -141,7 +141,7 @@ body.show ul.episodes li .broadcast_date {
     font-size: 0.8em;
 }
 
-body.show ul.episodes li .button {
+body.show #content ul.episodes li .button {
     position: absolute;
     bottom: 0px;
     width: 272px;
@@ -199,6 +199,19 @@ body.show ul.episodes li .button {
 
 #sidebar ul.social-medias li.twitter {
   background: transparent url('../images/twitter.png') no-repeat scroll center left;
+}
+
+#sidebar ul.episodes li {
+    position: relative;
+    margin: 5px 0 20px 0;
+}
+
+#sidebar ul.episodes .broadcast_date {
+    display: block;
+    color: #777;
+    position: absolute;
+    right: 0px;
+    font-size: 0.8em;
 }
 
 body.episode #content h2 {
