@@ -36,6 +36,21 @@
           </script>
         </div>
 
+        {% for episode in show.tag.saison-2 %}
+          {% if forloop.first %}
+          <h2>Saison 2</h2>
+          <ul class="episodes">
+          {% endif %}
+            <li>
+              <a href="{{ episode.url_for }}">
+                {{ episode.title }}
+              </a>
+            </li>
+          {% if forloop.last %}
+          </ul>
+          {% endif %}
+        {% endfor %}
+
         {% for episode in show.tag.saison-1 %}
           {% if forloop.first %}
           <h2>Saison 1</h2>
@@ -43,11 +58,8 @@
           {% endif %}
             <li>
               <a href="{{ episode.url_for }}">
-              {{ episode.title }}
+                {{ episode.title }}
               </a>
-              {% if episode.broadcasted_at %}
-              <span class="broadcast_date">diffusé {{episode.broadcasted_at | date: 'le %d/%m/%Y'}}</span>
-              {% endif %}
             </li>
           {% if forloop.last %}
           </ul>
