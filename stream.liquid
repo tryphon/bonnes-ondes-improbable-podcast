@@ -7,66 +7,17 @@
 
   <body class="stream">
     <div class="live">
-      <script>
-        threeSixtyPlayer.config.autoPlay = true;
-        threeSixtyPlayer.config.showHMSTime = false;
-        threeSixtyPlayer.config.playRingColor = threeSixtyPlayer.config.loadRingColor;
-      </script>
-
-      <div class="ui360 ui360-vis"><a onclick="location.href = 'http://stream.tryphon.eu/improbable-podcast.mp3.m3u'" href="http://stream.tryphon.eu/improbable-podcast.mp3" title="Ecouter en direct"><strong>L'Improbable Podcast</strong><br/>en direct jusqu'à 22h30</a></div>
+      <div class="player large autostart">
+        <a onclick="location.href = 'http://stream.tryphon.eu/improbable-podcast.mp3.m3u'" href="http://stream.tryphon.eu/improbable-podcast.mp3" title="Ecouter en direct">
+          <strong>L'Improbable Podcast</strong><br/>en direct jusqu'à 22h30
+        </a>
+      </div>
 
       <div class="m3u">
         <a href="http://stream.tryphon.eu/improbable-podcast.mp3.m3u">Ecouter avec votre lecteur</a>
       </div>
 
       <iframe src="http://webchat.quakenet.org/?randomnick=1&channels=improbable&uio=MTE9Mjg353" width="610" height="400"></iframe>
-
-<!--
-<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: '#impodcast OR @improbablepodca',
-  interval: 30000,
-  title: 'L\'Improbable Podcast',
-  subject: 'En direct jusqu\'à 22h30',
-  width: 'auto',
-  height: 300,
-  theme: {
-    shell: {
-      background: '#7d1b7f',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#444444',
-      links: '#1985b5'
-    }
-  },
-  features: {
-    scrollbar: true,
-    loop: false,
-    live: true,
-    behavior: 'all'
-  }
-}).render().start();
-</script>
-
-<script type="text/javascript">
-  twttr.anywhere(function (T) {
-    T("#twitter-box").tweetBox({
-      label: "Un improbable commentaire ?",
-      width: 620,
-      defaultContent: "#impodcast"
-    });
-  });
-</script>
-
-<div class="twitter-box">
-<span id="twitter-box"/>
-</div>
--->
     </div>
   </body>
 </html>

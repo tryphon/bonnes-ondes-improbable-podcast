@@ -258,9 +258,12 @@ body.episode #content #disqus_thread {
   padding: 5px 10px 0 10px;
 }
 
-#sidebar audio {
-  margin-top: 12px;
-  width: 253px;
+#sidebar .audio .player .duration {
+  display: none;
+}
+
+#sidebar .audio .player a {
+  margin-top: -5px;
 }
 
 #sidebar div.twitter {
