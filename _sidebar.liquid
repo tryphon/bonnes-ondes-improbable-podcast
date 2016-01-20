@@ -2,12 +2,12 @@
 
         <div class="podcast">
           <p>
-            Adresse du podcast : <input size="{{show.url_for_podcast | size}}" value="{{show.url_for_podcast}}" type="text" readonly="true"/> 
+            Adresse du podcast : <input size="{{show.url_for_podcast | size}}" value="{{show.url_for_podcast}}" type="text" readonly="true"/>
           </p>
-      
+
           <p>
-            <a href="{{show.itpc_url_for_podcast}}" title="Ajouter cd podcast dans votre iTunes">iTunes</a> 
-            | <a href="{{show.url_for_podcast}}" title="Voir le feed RSS">RSS</a> 
+            <a href="{{show.itpc_url_for_podcast}}" title="Ajouter cd podcast dans votre iTunes">iTunes</a>
+            | <a href="{{show.url_for_podcast}}" title="Voir le feed RSS">RSS</a>
             | {{show.clippy_for_podcast}}
           </p>
         </div>
@@ -23,7 +23,7 @@
         <h2>Sur Twitter</h2>
 
         <div class="twitter">
-          
+
         </div>
 
         <div>
@@ -35,6 +35,36 @@
             });
           </script>
         </div>
+
+        {% for episode in show.tag.saison-4 %}
+          {% if forloop.first %}
+          <h2>Saison 4</h2>
+          <ul class="episodes">
+          {% endif %}
+            <li>
+              <a href="{{ episode.url_for }}">
+                {{ episode.title }}
+              </a>
+            </li>
+          {% if forloop.last %}
+          </ul>
+          {% endif %}
+        {% endfor %}
+
+        {% for episode in show.tag.saison-3 %}
+          {% if forloop.first %}
+          <h2>Saison 3</h2>
+          <ul class="episodes">
+          {% endif %}
+            <li>
+              <a href="{{ episode.url_for }}">
+                {{ episode.title }}
+              </a>
+            </li>
+          {% if forloop.last %}
+          </ul>
+          {% endif %}
+        {% endfor %}
 
         {% for episode in show.tag.saison-2 %}
           {% if forloop.first %}
@@ -65,5 +95,3 @@
           </ul>
           {% endif %}
         {% endfor %}
-
-
